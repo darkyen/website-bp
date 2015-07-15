@@ -1,0 +1,17 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "bower_components/bootstrap-flat-sass/sass/bootstrap-flat.scss";
+@import "bower_components/devices.css/assets/scss/devices.scss";
+$app-yellow: rgb(249, 219, 0);
+
+body{
+  background: $app-yellow;
+}
+
+.first-container{
+  padding-top: 74px;
+}
