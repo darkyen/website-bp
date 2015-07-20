@@ -1,0 +1,1 @@
+"use strict";function run(){$.material.init(),$("#fullPage").fullpage({sectionsColor:["#121212","#fff","#fff","rgb(249, 219, 0)"],navigation:!0,slidesNavigation:!0,controlArrows:!1,loopHorizontal:!0,scrollOverflow:!0})}var k=function(){foo};$(document).ready(function(){return run()});
