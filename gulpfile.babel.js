@@ -1,6 +1,7 @@
 // generated on 2015-07-13 using generator-gulp-webapp 1.0.3
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import babel from 'gulp-babel';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
@@ -17,7 +18,7 @@ gulp.task('styles', () => {
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .pipe($.autoprefixer({browsers: ['last 5 versions']}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
@@ -32,11 +33,24 @@ function lint(files, options) {
       .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
   };
 }
+
 const testLintOptions = {
   env: {
     mocha: true
   }
 };
+
+function babelize(outputDir = '.tmp'){
+  return () => {
+    gulp.src('app/scripts/**/*.js')
+      .pipe(babel())
+      .pipe(gulp.dest( outputDir + '/scripts' ));
+  }
+}
+
+gulp.task('babel', babelize());
+gulp.task('babel:build', babelize('dist'));
+
 
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
@@ -89,7 +103,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], () => {
+gulp.task('serve', ['styles', 'babel', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -107,7 +121,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
-
+  gulp.watch('app/scripts/**/*.js', ['babel'])
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -156,7 +170,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'babel:build', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

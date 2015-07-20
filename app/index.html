@@ -11,8 +11,10 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/devices.css/assets/devices.min.css" />
     <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/material.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/ripples.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -28,7 +30,8 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<!--     <header class="navbar navbar-light navbar-fixed-top" id="top" role="banner">
+    
+    <header class="navbar navbar-light navbar-fixed-top hidden" id="top" role="banner">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
@@ -53,121 +56,276 @@
           </ul>          
       </div>
     </header>
- -->    <section class="first-container">
+    <article id="fullPage">
+    <section class="section first-container">
       <div class="container">
-        <div class="col-md-5 col-lg-5">
-          <div class="row">
-            <div class="marvel-device nexus5">
-              <div class="top-bar"></div>
-              <div class="volume"></div>
-              <div class="camera"></div>
-              <div class="speaker"></div>
-              <div class="screen">
-                  <!-- Content goes here -->
+        <div class="row">
+          <div class="col-md-4 col-md-offset-1 col-lg-4 hidden-xs">
+            <div class="row">
+              <div class="phone-demo">
+                <img src="/imgs/onePlus.png" class="img-responsive"/>
+                <iframe class="screen" src="//codepen.io/towc/embed/PqBWrr/"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="callout-1">
+              <h1 class="logo">BatuaPay</h1>
+              <h2 class="kick-line-1 hidden-xs">Its Like Cash, But Better</h2>
+              <hr />
+              <p class="seller-1">BatuaPay is the complete cash replacement, it brings the simplicity of cash into online transaction making it easier and more secure to pay online.</p>
+              <button class="btn btn-large btn-white">Get an Invite</button>
+              <button class="btn btn-large btn-white hidden-sm hidden-md hidden-lg">Try out Live</button>
+              <p>Are you a Merchant ? Check out our free POS &amp; myraid of CMS/POS integrations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section people-illustration-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 montage hidden-xs">
+            <div class="phone-montage">
+              <div class="left-phone">
+                <img src="/imgs/nexus5.png" class="img-responsive"/>
+              </div>
+              <div class="middle-phone">
+                <img src="/imgs/iPhone6.png" class="img-responsive" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 cards">
+            <div class="row">
+              <div class="use-case slide">
+                <div class="card shadow shadow-z-2">
+                  <div class="inner">
+                    <header class="heading">
+                      <h2>Anywhere Anytime Anyone</h2>
+                    </header>
+                    <div class="illustration">
+                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />
+                    </div>
+                    <div class="content">
+                      <p class="text-justify">Pay / Charge even when you are offline & other apps you can pay or charge anyone even if they aren't using Batua, thus we make it possible for you to be as cashless as possible.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="use-case slide">
+                <div class="card shadow shadow-z-2">
+                  <div class="inner">
+                    <header class="heading">
+                      <h2>Your Money With You</h2>
+                    </header>
+                    <div class="illustration">
+                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
+                    </div>
+                    <div class="content">
+                      <p class="text-justify">All you need is a Debit / Credit card or a Bank Account to make & accept payments. Thus all your money stays in your account giving you more interest from the bank.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="use-case slide">
+                <div class="card shadow shadow-z-2">
+                  <div class="inner">
+                    <header class="heading">
+                      <h2>Money at light speed</h2>
+                    </header>
+                    <div class="illustration">
+                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />
+                    </div>
+                    <div class="content">
+                      <p class="text-justify">Our state of art architecture makes it possible for you to send / recieve money in 30 seconds, All this money is transferred immediately to the receivers bank account, Fast & Secure.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="use-case slide">
+                <div class="card shadow shadow-z-2">
+                  <div class="inner">
+                    <header class="heading">
+                      <h2>Safe In Your Pocket !</h2>
+                    </header>
+                    <div class="illustration">
+                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />
+                    </div>
+                    <div class="content">
+                      <p class="text-justify">Every transaction request comes to your phone as push notification, as your credentials are already encrypted by your finger prints no transactions can be made without your consent.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="use-case slide">
+                <div class="card shadow shadow-z-2">
+                  <div class="inner">
+                    <header class="heading">
+                      <h2>Split & Share</h2>
+                    </header>
+                    <div class="illustration">
+                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
+                    </div>
+                    <div class="content">
+                      <p class="text-justify"> BatuaPay makes it effortless to split and pay bills with friends & family. We also added special features to setup pocket money and allowances in
+                      simple & friendly steps.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="use-case slide">
+                <div class="card shadow shadow-z-2">
+                  <div class="inner">
+                    <header class="heading">
+                      <h2>Track Every Penny</h2>
+                    </header>
+                    <div class="illustration">
+                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
+                    </div>
+                    <div class="content">
+                      <p class="text-justify">Tracking Expenses can be a pain, so we included an extremely simple and straight expense tracker which lets you track all your expenses the simple & consise way.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="well">
-            <h2>Money made,</h2>
-            <h1>Simple</h1>
-            <hr />
-            <p>Simple is a transactions effortless, convienient and digital. It merges the simplicity of cash with the power of the web !</p>
-            <p>Merchant ? Check out our free POS &amp; myraid of CMS/POS integrations.</p>
+      </div>
+    </section>
+
+    <section class="section features">
+      <div class="container">
+        <h2>Everyday Transactions, Done Right !</h2>
+        <div class="row">
+        <div class="feature col-lg-4">
+          <div class="fp-card">
+            <div class="inner">
+              <header class="heading">
+                <h2>Anywhere Anytime Anyone</h2>
+              </header>
+              <div class="content">
+                <p class="text-justify">Pay / Charge even when you are offline & other apps you can pay or charge anyone even if they aren't using Batua, thus we make it possible for you to be as cashless as possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature col-lg-4">
+          <div class="fp-card">
+            <div class="inner">
+              <header class="heading">
+                <h2>Your Money With You</h2>
+              </header>
+              <div class="content">
+                <p class="text-justify">All you need is a Debit / Credit fp-card or a Bank Account to make & accept payments. Thus all your money stays in your account giving you more interest from the bank.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature col-lg-4">
+          <div class="fp-card">
+            <div class="inner">
+              <header class="heading">
+                <h2>Money at light speed</h2>
+              </header>
+              <div class="content">
+                <p class="text-justify">Our state of art architecture makes it possible for you to send / recieve money in 30 seconds, All this money is transferred immediately to the receivers bank account, Fast & Secure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature col-lg-4">
+          <div class="fp-card">
+            <div class="inner">
+              <header class="heading">
+                <h2>Safe In Your Pocket !</h2>
+              </header>
+              <div class="content">
+                <p class="text-justify">Every transaction request comes to your phone as push notification, as your credentials are already encrypted by your biometrics no transaction can be made without your consent.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature col-lg-4">
+          <div class="fp-card">
+            <div class="inner">
+              <header class="heading">
+                <h2>Split & Share</h2>
+              </header>
+              <div class="content">
+                <p class="text-justify"> BatuaPay makes it effortless to split and pay bills with friends & family. We also added special features to setup pocket money and allowances in
+                simple & friendly steps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature col-lg-4">
+          <div class="fp-card">
+            <div class="inner">
+              <header class="heading">
+                <h2>Track Every Penny</h2>
+              </header>
+              <div class="content">
+                <p class="text-justify">Tracking Expenses can be a pain, so we included an extremely simple and straight expense tracker which lets you track all your expenses the simple & consise way.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>  
+      </div>
+    </section>
+    <section class="section invites">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="Invited-Call well card">
+              <h2>Are you a Merchant or Venture?</h2>
+              <hr />
+              <p class="text-justify invite-seller">We have state of art features built in for you, like offline Point of Sale software which syncs with an integrated Content Managment & Resource Planners, you can learn more about them here <a href="#">here</a>. We would love to partner with you & scale your buisness to the next level with you. You can contact us via the form & we will get back to you as soon as possible.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" required="true" placeholder="Your Name" class="form-control floating-label" />
+                </div>
+                <div class="col-md-6">
+                  <input type="text" required="true" placeholder="Your City" class="form-control floating-label" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="email" required="true" placeholder="Where can we notify" class="form-control floating-label"/>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" required="true" placeholder="Your products / services" class="form-control floating-label"/>
+                </div>
+              </div>
+              <button class="btn btn-flat btn-primary btn-half pull-right">Call Me</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="Invited-Call well card">
+              <h2>Get An Invite</h2>
+              <hr />
+              <p class="text-justify invite-seller">We are in public beta, ask a friend for an invite you or can simply register with your phone number or email here & we will send you in the next batch.</p>
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="text"  required="true" placeholder="Your Name" class="form-control floating-label"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="email" required="true" placeholder="Where can we notify" class="form-control floating-label"/>
+                </div>
+              </div>              
+              <button class="btn btn-flat btn-primary btn-full">Send Invite</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <div class="container">
-        <h2 class="txt-center">Like cash but awesome</h2>
-        <h3>I am a 
-          <select>
-            <option>User</option>
-            <option>Merchant</option>
-            <option>Developer</option>
-          </select>
-        </h3>
-        <ul class="features list-unstyled">
-          
-          <li class="feature merchant">
-            <h3>Digitalize your business</h3>
-            <p>Our integrated POS / CMS / ERP allows you to focus on your service while we do the heavy lifting. All this is free, and you can recieve cash transactions like you always did.</p>
-          </li>
-
-          <li class="feature merchant">
-            <h3>Accept orders online</h3>
-            <p>Scaling your business ? It takes a single click to start accepting orders from an online market.</p>
-          </li>
-
-          <li class="feature user">
-            <h3>2 Factor forever !</h3>
-            <p>Any invoice to you comes on your device, thus it is automatically 2 factor protected. Also this ensures you are never charged without your knowledge</p>
-          </li>
-
-          <li class="feature user">
-            <h3>Blazing fast</h3>
-            <p>Recieve money in 30 seconds of payment for no fees, you get notified instantly!</p>
-          </li>
-
-          <li class="feature user">
-            <h3>Security++</h3>
-            <p>Neither your credentials nor your data ever touches our servers. The data on your devices is encrypted via your biometric/pin, thus making it impossible to be breached.</p>
-          </li>
-
-          <li class="feature user merchant">
-            <h3>Offline !</h3>
-            <p>No Data, No problem ! Make transactions even when you are out of data network, our SMSS ensures your transactions are protected and uses conventional sms to send and receive payments.</p>
-          </li>
-
-          <li class="feature merchant">
-            <h3>Get Discovered</h3>
-            <p>Scale you business higher, our end user client allows you to attract more customers, its easy to make promotions and offer discounts !</p>
-          </li>
-
-          <li class="feature user">
-            <h3>Scout</h3>
-            <p>Find the best prices around you with a single tap, inbuilt scout feature finds what you needs with the best offers in seconds !</p>
-          </li>
-
-          <li class="feature user">
-            <h3>Family Sharing</h3>
-            <p>Just like when using cash, you can pay for your loved ones with a simple tap, create quotas and much more. Amazing for parents with teens.</p>
-          </li>
-
-          <li class="feature user merchant">
-            <h3>Works Everywhere</h3>
-            <p>Got to Pay/Charge someone without the app, simply enter their phone number or email, they will recieve a secure link by which they can pay without even signing up.</p>
-          </li>
-
-          <li class="feature dev">
-            <h3>RESTful</h3>
-            <p>Our API servers are RESTful, with sdks on major platform allowing you to accept blazing fast payments in seconds !</p>
-          </li>
-
-          <li class="feature dev">
-            <h3>Offline</h3>
-            <p>We allow you to recieve payments even when your user is offline, <a>Learn more</a></p>
-          </li>
-
-        </div>
-      </div>
-    </section>
-    <section id="invite-discover">
-      <div class="container">
-        <div class="invite">
-          <h2>Coming Soon !</h2>
-          <input /><button></button>
-          <p>Enter your phone number or email address and we will notify you when we launch in you city</p>
-        </div>
-        <div class="discover">
-          <h2>Around you</h2>
-          <input /><button></button>
-          <p>Find merchants that accept payments from us.</p>         
-        </div>
-      </div>
-    </section>
+    </article>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -181,23 +339,14 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
+    <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+    <script src="/bower_components/bootstrap-material-design/dist/js/material.js"></script>
+    <script src="/bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

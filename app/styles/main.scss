@@ -1,17 +1,215 @@
 $icon-font-path: '../fonts/';
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import "bower_components/bootstrap-flat-sass/sass/bootstrap-flat.scss";
-@import "bower_components/devices.css/assets/scss/devices.scss";
+.btn{
+	border-radius: 0;
+}
 $app-yellow: rgb(249, 219, 0);
 
 body{
-  background: $app-yellow;
+  background-color: $app-yellow;
+  font-family: Helvetica Neue, Segoe UI, Roboto;
 }
 
-.first-container{
-  padding-top: 74px;
+h1{
+	font-weight: 100;
+}
+
+h2, h3{
+	font-weight: 300;
+}
+
+.callout-1{
+	color: #ffffff;
+	.logo, .btn-large{
+		margin: 0.3em 0;
+	}
+	.btn-large{
+		margin-bottom: 4em;
+	}
+}
+
+.seller-1{
+	font-size: 1.3em;
+	font-weight: 300;
+	text-align: justify;
+}
+
+.btn-app-store{
+}
+
+.btn-app-store:hover{
+	color: #fff;
+}
+
+.logo{
+	font-size: 54px;
+}
+.phone-demo{
+	position: relative;
+	.screen{
+		border: 0;
+		position: absolute;
+		width: 89.5%;
+		height: 78%;
+		top: 9.3%; left: 5%;
+	}
+}
+
+.people-illustration-background{
+	background: url('/imgs/characters_C.jpg');
+	background-repeat: none;
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-white{
+	background: #fff;
+}
+.callout-2{
+	margin-top: 74px;
+}
+
+.phone-montage{
+	position: relative;
+	.left-phone{
+		position: absolute;
+		left: 25%;
+		width: 70%;
+		bottom: 0px;
+	}
+
+	.middle-phone{
+		position: relative;
+		width: 75%;
+		left: 0%;
+	}
+}
+
+.cards .fp-slides{
+	overflow: visible;
+}
+
+
+.feature.slide{
+	box-sizing: border-box;
+}
+
+
+.use-case .card{
+	position: relative;
+	max-height: 480px;
+	max-width: 320px;
+	height: 100%;
+	width: 100%;
+}
+
+.montage{
+	position: relative;
+	z-index: 1000;
+}
+
+
+
+.use-case .card{
+
+	.heading{
+		background: $app-yellow;
+		padding: 0.8em 1.2em;
+		color: #313131;
+	}
+	
+	.illustration{
+		padding: 0.8em 1.2em;
+	}
+
+	.content{
+		padding: 0.8em 1.2em 1.6em;
+		font-size: 1.12em;
+	}
+}
+
+.heading > h2{
+	font-size: 1.4em;
+}
+
+@media(max-width: $screen-sm){
+	.fp-slidesNav.bottom{
+		bottom: 0px;
+	}
+	#fp-nav.right{
+		right: 0px;
+	}
+
+	.card{
+		text-align: left;
+	}
+	
+	.cards .fp-tableCell{	
+		text-align: center;
+	}
+}
+
+@media(min-width: $screen-sm){
+	
+	.callout-1{
+		.logo, .btn-large{
+			margin: 2.0em 0;
+		}
+		.btn-large{
+			margin-bottom: 8em;
+		}
+	}
+	
+	.feature{
+		margin: 20px 0;
+	}
+
+	.use-case.slide{
+		padding: 48px;
+	}
+
+	.card .illustration{
+		display: none;
+	}
+
+	.slide .card{
+		max-height: none;
+		max-width: none;
+		margin-bottom: 40px;
+		height: auto;
+	}
+	.invite-seller{
+		font-size: 1.10em;
+	}
+}
+
+.invites {
+	.form-control-wrapper, .btn-full, .btn-half{
+		margin: 2em 0;
+	}
+}
+
+.feature {
+	.content{
+		font-size: 1.18em;
+	}
+}
+
+.invites{
+	.form-control-wrapper .form-control:focus ~ .floating-label, .form-control-wrapper .form-control:not(.empty) ~ .floating-label{
+		top: -20px;
+	}
+}
+.btn-half{
+	display: block;
+	width: auto;
+}
+.btn-full{
+	display: block;
+	width: 100%;
 }
