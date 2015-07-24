@@ -1,0 +1,29 @@
+// something big is going to be here.
+let k = () => { foo };
+
+function run(){
+	// $.material.init()
+	let verticalScroller = new Swiper('.fullpage-swiper', {
+		direction: 'vertical',
+		slidesPerView: 'auto',
+		mousewheelControl: true,
+		centeredSlides: true,
+		simulateTouch: true,
+		keyboardControl: true,
+		pagination: '.swiper-pagination'
+	});
+
+	let cardSwiper = new Swiper('.mdl-card-swiper', {
+		pagination: '.swiper-pagination-2',
+		direction: 'horizontal',
+		slidesPerView: 'auto',
+		keyboardControl: true,
+		centeredSlides: true,
+		simulateTouch: true,
+		spaceBetween: 20,
+	});
+
+	console.log(verticalScroller);
+}
+
+window.onload = () => run();

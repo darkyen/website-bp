@@ -7,14 +7,14 @@
     <title>batua web</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
-    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css" />
-    <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/material.css" />
-    <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/ripples.css" />
+    <link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+    <link rel="stylesheet" href="/bower_components/material-design-lite/material.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -30,301 +30,310 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <header class="navbar navbar-light navbar-fixed-top hidden" id="top" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="../" class="navbar-brand">BatuaPay</a>
+    <article class="fullpage-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <section class="section first-container">
+            <div class="section-content">
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col hidden-mobile"></div>
+                <div class="mdl-cell mdl-cell--4-col hidden-mobile">
+                  <div class="phone-demo">
+                    <img src="./imgs/onePlus.png" class="img-responsive"/>
+                    <iframe class="screen" src="http://darkyen.github.io/react-ui-components/#/home"></iframe>
+                  </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col">
+                  <div class="callout-1">
+                    <h1 class="logo">BatuaPay</h1>
+                    <h2 class="kick-line-1 hidden-xs">Its Like Cash, But Better</h2>
+                    <hr />
+                    <p class="seller-1">BatuaPay is the complete cash replacement, it brings the simplicity of cash into online transaction making it easier and more secure to pay online.</p>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Get an Invite</button>
+                    <button class="mdl-button mdl-js-button">Try out Live</button>
+                    <p>Are you a Merchant ? Check out our free POS &amp; myraid of CMS/POS integrations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <nav id="bs-navbar" class="collapse navbar-collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="../getting-started/">What</a>
-            </li>
-            <li>
-              <a href="../css/">Where</a>
-            </li>
-            <li>
-              <a href="../customize/">Invite</a>
-            </li>
-          </ul>          
-      </div>
-    </header>
-    <article id="fullPage">
-    <section class="section first-container">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-md-offset-1 col-lg-4 hidden-xs">
-            <div class="row">
-              <div class="phone-demo">
-                <img src="/imgs/onePlus.png" class="img-responsive"/>
-                <iframe class="screen" src="//codepen.io/towc/embed/PqBWrr/"></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="callout-1">
-              <h1 class="logo">BatuaPay</h1>
-              <h2 class="kick-line-1 hidden-xs">Its Like Cash, But Better</h2>
-              <hr />
-              <p class="seller-1">BatuaPay is the complete cash replacement, it brings the simplicity of cash into online transaction making it easier and more secure to pay online.</p>
-              <button class="btn btn-large btn-white">Get an Invite</button>
-              <button class="btn btn-large btn-white hidden-sm hidden-md hidden-lg">Try out Live</button>
-              <p>Are you a Merchant ? Check out our free POS &amp; myraid of CMS/POS integrations.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section people-illustration-background">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 montage hidden-xs">
-            <div class="phone-montage">
-              <div class="left-phone">
-                <img src="/imgs/nexus5.png" class="img-responsive"/>
-              </div>
-              <div class="middle-phone">
-                <img src="/imgs/iPhone6.png" class="img-responsive" />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 cards">
-            <div class="row">
-              <div class="use-case slide">
-                <div class="card shadow shadow-z-2">
-                  <div class="inner">
-                    <header class="heading">
-                      <h2>Anywhere Anytime Anyone</h2>
-                    </header>
-                    <div class="illustration">
-                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />
+        <div class="swiper-slide">        
+          <section class="section people-illustration-background">
+            <div class="section-content">
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col montage hidden-mobile">
+                  <div class="phone-montage">
+                    <div class="left-phone">
+                      <img src="./imgs/nexus5.png" class="img-responsive"/>
                     </div>
-                    <div class="content">
-                      <p class="text-justify">Pay / Charge even when you are offline & other apps you can pay or charge anyone even if they aren't using Batua, thus we make it possible for you to be as cashless as possible.</p>
+                    <div class="middle-phone">
+                      <img src="./imgs/iPhone6.png" class="img-responsive" />
+                    </div>
+                  </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col cards">
+                  <div class="card-desktop-center-fix">
+                    <div class="mdl-card-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="use-case swiper-slide">
+                          <div class="card mdl-card mdl-shadow--4dp">
+                            <header class="mdl-card__title">
+                              <h2 class="mdl-card__title-text">Boundless</h2>
+                            </header>
+                            <div class="illustration">
+                              <img src="http://lorempizza.com/400/300/" class="img-responsive" />
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                              <p class="text-justify">Pay / Charge even when you are offline & other apps you can pay or charge anyone even if they aren't using Batua, thus we make it possible real cashless possible for everyone.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="use-case swiper-slide">
+                          <div class="card mdl-card mdl-shadow--4dp">
+                            
+                              <header class="mdl-card__title">
+                                <h2 class="mdl-card__title-text">Your Money With You</h2>
+                              </header>
+                              <div class="illustration">
+                                <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
+                              </div>
+                              <div class="mdl-card__supporting-text">
+                                <p class="text-justify">All you need is a Debit / Credit card or a Bank Account to make & accept payments. Thus all your money stays in your account giving you more interest from the bank.</p>
+                              </div>                          
+                          </div>
+                        </div>
+                        <div class="use-case swiper-slide">
+                          <div class="card mdl-card mdl-shadow--4dp">  
+                            <header class="mdl-card__title">
+                              <h2 class="mdl-card__title-text">Money at light speed</h2>
+                            </header>
+                            <div class="illustration">
+                              <img src="http://lorempizza.com/400/300/" class="img-responsive" />
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                              <p class="text-justify">Our state of art architecture makes it possible for you to send / recieve money in 30 seconds, All this money is transferred immediately to the receivers bank account, Fast & Secure.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="use-case swiper-slide">
+                          <div class="card mdl-card mdl-shadow--4dp">
+                            
+                            <header class="mdl-card__title">
+                              <h2 class="mdl-card__title-text">Safe In Your Pocket !</h2>
+                            </header>
+                            <div class="illustration">
+                              <img src="http://lorempizza.com/400/300/" class="img-responsive" />
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                              <p class="text-justify">Every transaction request comes to your phone as push notification, as your credentials are already encrypted by your finger prints no transactions can be made without your consent.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="use-case swiper-slide">
+                          <div class="card mdl-card mdl-shadow--4dp">
+                            
+                              <header class="mdl-card__title">
+                                <h2 class="mdl-card__title-text">Split & Share</h2>
+                              </header>
+                              <div class="illustration">
+                                <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
+                              </div>
+                              <div class="mdl-card__supporting-text">
+                                <p class="text-justify"> BatuaPay makes it effortless to split and pay bills with friends & family. We also added special features to setup pocket money and allowances in                             simple & friendly steps.</p>
+                            
+                            </div>
+                          </div>
+                        </div>
+                        <div class="use-case swiper-slide">
+                          <div class="card mdl-card mdl-shadow--4dp">
+                            
+                              <header class="mdl-card__title">
+                                <h2 class="mdl-card__title-text">Track Every Penny</h2>
+                              </header>
+                              <div class="illustration">
+                                <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
+                              </div>
+                              <div class="mdl-card__supporting-text">
+                                <p class="text-justify">Tracking Expenses can be a pain, so we included an extremely simple and straight expense tracker which lets you track all your expenses the simple & consise way for everyone.</p>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination-2"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </section>
+        </div>
 
-            <div>
-              <div class="use-case slide">
-                <div class="card shadow shadow-z-2">
-                  <div class="inner">
-                    <header class="heading">
-                      <h2>Your Money With You</h2>
-                    </header>
-                    <div class="illustration">
-                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
-                    </div>
-                    <div class="content">
-                      <p class="text-justify">All you need is a Debit / Credit card or a Bank Account to make & accept payments. Thus all your money stays in your account giving you more interest from the bank.</p>
+        <div class="swiper-slide hidden-mobile">        
+          <section class="section features">
+            <div class="section-content">
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                  <h2 class="">Everyday Transactions, Done Right !</h2>
+                </div>
+                <div class="feature mdl-cell mdl-cell--4-col">
+                  <div class="fp-card">
+                    <div class="inner">
+                      <header>
+                        <h2 class="mdl-typography--title">Anywhere Anytime Anyone</h2>
+                      </header>
+                      <div class="content">
+                        <p class="text-justify">Pay / Charge even when you are offline & other apps you can pay or charge anyone even if they aren't using Batua, thus we make it possible for you to be as cashless as possible.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="use-case slide">
-                <div class="card shadow shadow-z-2">
-                  <div class="inner">
-                    <header class="heading">
-                      <h2>Money at light speed</h2>
-                    </header>
-                    <div class="illustration">
-                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />
-                    </div>
-                    <div class="content">
-                      <p class="text-justify">Our state of art architecture makes it possible for you to send / recieve money in 30 seconds, All this money is transferred immediately to the receivers bank account, Fast & Secure.</p>
+                <div class="feature mdl-cell mdl-cell--4-col">
+                  <div class="fp-card">
+                    <div class="inner">
+                      <header>
+                        <h2 class="mdl-typography--title">Your Money With You</h2>
+                      </header>
+                      <div class="content">
+                        <p class="text-justify">All you need is a Debit / Credit fp-card or a Bank Account to make & accept payments. Thus all your money stays in your account giving you more interest from the bank.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="use-case slide">
-                <div class="card shadow shadow-z-2">
-                  <div class="inner">
-                    <header class="heading">
-                      <h2>Safe In Your Pocket !</h2>
-                    </header>
-                    <div class="illustration">
-                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />
-                    </div>
-                    <div class="content">
-                      <p class="text-justify">Every transaction request comes to your phone as push notification, as your credentials are already encrypted by your finger prints no transactions can be made without your consent.</p>
+                <div class="feature mdl-cell mdl-cell--4-col">
+                  <div class="fp-card">
+                    <div class="inner">
+                      <header>
+                        <h2 class="mdl-typography--title">Money at light speed</h2>
+                      </header>
+                      <div class="content">
+                        <p class="text-justify">Our state of art architecture makes it possible for you to send / recieve money in 30 seconds, All this money is transferred immediately to the receivers bank account, Fast & Secure.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="use-case slide">
-                <div class="card shadow shadow-z-2">
-                  <div class="inner">
-                    <header class="heading">
-                      <h2>Split & Share</h2>
-                    </header>
-                    <div class="illustration">
-                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
-                    </div>
-                    <div class="content">
-                      <p class="text-justify"> BatuaPay makes it effortless to split and pay bills with friends & family. We also added special features to setup pocket money and allowances in
-                      simple & friendly steps.</p>
+                <div class="feature mdl-cell mdl-cell--4-col">
+                  <div class="fp-card">
+                    <div class="inner">
+                      <header>
+                        <h2 class="mdl-typography--title">Safe In Your Pocket !</h2>
+                      </header>
+                      <div class="content">
+                        <p class="text-justify">Every transaction request comes to your phone as push notification, as your credentials are already encrypted by your biometrics no transaction can be made without your consent.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="use-case slide">
-                <div class="card shadow shadow-z-2">
-                  <div class="inner">
-                    <header class="heading">
-                      <h2>Track Every Penny</h2>
-                    </header>
-                    <div class="illustration">
-                      <img src="http://lorempizza.com/400/300/" class="img-responsive" />                      
-                    </div>
-                    <div class="content">
-                      <p class="text-justify">Tracking Expenses can be a pain, so we included an extremely simple and straight expense tracker which lets you track all your expenses the simple & consise way.</p>
+                <div class="feature mdl-cell mdl-cell--4-col">
+                  <div class="fp-card">
+                    <div class="inner">
+                      <header>
+                        <h2 class="mdl-typography--title">Split & Share</h2>
+                      </header>
+                      <div class="content">
+                        <p class="text-justify"> BatuaPay makes it effortless to split and pay bills with friends & family. We also added special features to setup pocket money and allowances in
+                        simple & friendly steps.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                <div class="feature mdl-cell mdl-cell--4-col">
+                  <div class="fp-card">
+                    <div class="inner">
+                      <header>
+                        <h2 class="mdl-typography--title">Track Every Penny</h2>
+                      </header>
+                      <div class="content">
+                        <p class="text-justify">Tracking Expenses can be a pain, so we included an extremely simple and straight expense tracker which lets you track all your expenses the simple & consise way.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
             </div>
-          </div>
+          </section>
         </div>
-      </div>
-    </section>
+        
+        <div class="swiper-slide">        
+          <section class="section invites">
+            <div class="section-content">
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col hidden-mobile">
+                  <div class="Invited-Call mdl-card mdl-card-filler mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                      <h2 class="mdl-card__title-text">Get An Invite</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                      <p class="text-justify invite-seller">We have state of art features built in for you, like offline Point of Sale software which syncs with an integrated Content Managment & Resource Planners, you can learn more about them <a href="#">here</a>. We would love to partner with you & scale your buisness to the next level with you. You can contact us via the form & we will get back to you as soon as possible.</p>
+                      <div class="mdl-grid mdl-grid-full"> 
+                        <div class="mdl-cell mdl-cell--6-col">
+                          <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield fluid-textfield">
+                            <input type="text" required="true"  class="mdl-textfield__input" id="name-seller-call" />
+                            <label class="mdl-textfield__label" for="name-seller-call">Your Name</label>
+                          </div>              
+                        </div>
 
-    <section class="section features">
-      <div class="container">
-        <h2>Everyday Transactions, Done Right !</h2>
-        <div class="row">
-        <div class="feature col-lg-4">
-          <div class="fp-card">
-            <div class="inner">
-              <header class="heading">
-                <h2>Anywhere Anytime Anyone</h2>
-              </header>
-              <div class="content">
-                <p class="text-justify">Pay / Charge even when you are offline & other apps you can pay or charge anyone even if they aren't using Batua, thus we make it possible for you to be as cashless as possible.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="feature col-lg-4">
-          <div class="fp-card">
-            <div class="inner">
-              <header class="heading">
-                <h2>Your Money With You</h2>
-              </header>
-              <div class="content">
-                <p class="text-justify">All you need is a Debit / Credit fp-card or a Bank Account to make & accept payments. Thus all your money stays in your account giving you more interest from the bank.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="feature col-lg-4">
-          <div class="fp-card">
-            <div class="inner">
-              <header class="heading">
-                <h2>Money at light speed</h2>
-              </header>
-              <div class="content">
-                <p class="text-justify">Our state of art architecture makes it possible for you to send / recieve money in 30 seconds, All this money is transferred immediately to the receivers bank account, Fast & Secure.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="feature col-lg-4">
-          <div class="fp-card">
-            <div class="inner">
-              <header class="heading">
-                <h2>Safe In Your Pocket !</h2>
-              </header>
-              <div class="content">
-                <p class="text-justify">Every transaction request comes to your phone as push notification, as your credentials are already encrypted by your biometrics no transaction can be made without your consent.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="feature col-lg-4">
-          <div class="fp-card">
-            <div class="inner">
-              <header class="heading">
-                <h2>Split & Share</h2>
-              </header>
-              <div class="content">
-                <p class="text-justify"> BatuaPay makes it effortless to split and pay bills with friends & family. We also added special features to setup pocket money and allowances in
-                simple & friendly steps.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="feature col-lg-4">
-          <div class="fp-card">
-            <div class="inner">
-              <header class="heading">
-                <h2>Track Every Penny</h2>
-              </header>
-              <div class="content">
-                <p class="text-justify">Tracking Expenses can be a pain, so we included an extremely simple and straight expense tracker which lets you track all your expenses the simple & consise way.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>  
-      </div>
-    </section>
-    <section class="section invites">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="Invited-Call well card">
-              <h2>Are you a Merchant or Venture?</h2>
-              <hr />
-              <p class="text-justify invite-seller">We have state of art features built in for you, like offline Point of Sale software which syncs with an integrated Content Managment & Resource Planners, you can learn more about them here <a href="#">here</a>. We would love to partner with you & scale your buisness to the next level with you. You can contact us via the form & we will get back to you as soon as possible.</p>
-              <div class="row">
-                <div class="col-md-6">
-                  <input type="text" required="true" placeholder="Your Name" class="form-control floating-label" />
+                        <div class="mdl-cell mdl-cell--6-col">
+                          <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield fluid-textfield">
+                            <input type="text" required="true"  class="mdl-textfield__input" id="city-seller-call" />
+                            <label class="mdl-textfield__label" for="city-seller-call">City</label>
+                          </div>              
+                        </div> 
+        
+                        <div class="mdl-cell mdl-cell--6-col">
+                          <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield fluid-textfield">
+                            <input type="email" required="true"  class="mdl-textfield__input" id="email-seller-call" />
+                            <label class="mdl-textfield__label" for="email-invite">Email / Phone Number</label>
+                          </div>     
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--6-col">
+                          <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield fluid-textfield">
+                            <input type="text" required="true"  class="mdl-textfield__input" id="industry-seller-call" />
+                            <label class="mdl-textfield__label" for="city-seller-call">Primary Industry</label>
+                          </div>              
+                        </div>
+                    </div>
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect">Call Me</button>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <input type="text" required="true" placeholder="Your City" class="form-control floating-label" />
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                  <form class="Invited-Call mdl-card mdl-card-filler mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                      <h2 class="mdl-card__title-text">Get An Invite</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                      <p class="text-justify invite-seller">We are in public beta, ask a friend for an invite you or can simply register with your phone number or email here & we will send you in the next batch.</p>
+
+                      <div class="mdl-grid"> 
+                        <div class="mdl-cell--12-col">
+                          <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield fluid-textfield">
+                            <input type="text" required="true"  class="mdl-textfield__input" id="name-invite" />
+                            <label class="mdl-textfield__label" for="name-invite">Your Name</label>
+                          </div>
+                        </div>
+                        <div class="mdl-cell--12-col">
+                          <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield fluid-textfield">
+                            <input type="email" required="true"  class="mdl-textfield__input" id="email-invite" />
+                            <label class="mdl-textfield__label" for="email-invite">Email / Phone Number</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                      <button class="mdl-button mdl-js-button mdl-js-ripple-effect">Send Invite</button>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <input type="email" required="true" placeholder="Where can we notify" class="form-control floating-label"/>
-                </div>
-                <div class="col-md-6">
-                  <input type="email" required="true" placeholder="Your products / services" class="form-control floating-label"/>
-                </div>
-              </div>
-              <button class="btn btn-flat btn-primary btn-half pull-right">Call Me</button>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="Invited-Call well card">
-              <h2>Get An Invite</h2>
-              <hr />
-              <p class="text-justify invite-seller">We are in public beta, ask a friend for an invite you or can simply register with your phone number or email here & we will send you in the next batch.</p>
-              <div class="row">
-                <div class="col-md-12">
-                  <input type="text"  required="true" placeholder="Your Name" class="form-control floating-label"/>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <input type="email" required="true" placeholder="Where can we notify" class="form-control floating-label"/>
-                </div>
-              </div>              
-              <button class="btn btn-flat btn-primary btn-full">Send Invite</button>
-            </div>
-          </div>
+          </section>
         </div>
       </div>
-    </section>
+      <div class="swiper-pagination"></div>
     </article>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -338,12 +347,8 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
-    <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
-    <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
-    <script src="/bower_components/bootstrap-material-design/dist/js/material.js"></script>
-    <script src="/bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/material-design-lite/material.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

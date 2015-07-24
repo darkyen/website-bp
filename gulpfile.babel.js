@@ -5,6 +5,7 @@ import babel from 'gulp-babel';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import ghPages from 'gulp-gh-pages';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -42,14 +43,14 @@ const testLintOptions = {
 
 function babelize(outputDir = '.tmp'){
   return () => {
-    gulp.src('app/scripts/**/*.js')
+    gulp.src('app/scripts/**/*.babel')
       .pipe(babel())
       .pipe(gulp.dest( outputDir + '/scripts' ));
   }
 }
 
 gulp.task('babel', babelize());
-gulp.task('babel:build', babelize('dist'));
+// gulp.task('babel:build', babelize());
 
 
 gulp.task('lint', lint('app/scripts/**/*.js'));
@@ -69,7 +70,7 @@ gulp.task('html', ['styles'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
+  return gulp.src('app/imgs/**/*')
     .pipe($.if($.if.isFile, $.cache($.imagemin({
       progressive: true,
       interlaced: true,
@@ -81,7 +82,7 @@ gulp.task('images', () => {
       console.log(err);
       this.end();
     })))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('dist/imgs'));
 });
 
 gulp.task('fonts', () => {
@@ -117,11 +118,11 @@ gulp.task('serve', ['styles', 'babel', 'fonts'], () => {
 
   gulp.watch([
     'app/*.html',
-    'app/scripts/**/*.js',
+    '.tmp/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
-  gulp.watch('app/scripts/**/*.js', ['babel'])
+  gulp.watch('app/scripts/**/*.babel', ['babel'])
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -170,8 +171,13 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'babel:build', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['babel', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+});
+
+gulp.task('deploy', ['build'], ()=>{
+  return gulp.src('dist/**/*')
+          .pipe(ghPages());
 });
 
 gulp.task('default', ['clean'], () => {
