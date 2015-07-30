@@ -3,14 +3,28 @@ let k = () => { foo };
 
 function run(){
 	// $.material.init()
+	let foo = [].slice.call(document.querySelectorAll('.screenshots'), 0);
+	let foo2 = document.querySelector('#footato');
+	foo2.addEventListener('click', function(){
+		verticalScroller.slideTo(4);
+	});
+	let imagel = [];
+	
+	for( var i = 1; i < 6 ; i++ ){
+		let image = new Image();
+		image.src = './imgs/ss'+ i + '.png';
+		imagel.push(image);
+	}
+
 	let verticalScroller = new Swiper('.fullpage-swiper', {
+		pagination: '.swiper-pagination',
 		direction: 'vertical',
 		slidesPerView: 'auto',
 		mousewheelControl: true,
 		centeredSlides: true,
-		simulateTouch: true,
 		keyboardControl: true,
-		pagination: '.swiper-pagination'
+		simulateTouch: false,
+		hashnav: true,
 	});
 
 	let cardSwiper = new Swiper('.mdl-card-swiper', {
@@ -19,10 +33,19 @@ function run(){
 		slidesPerView: 'auto',
 		keyboardControl: true,
 		centeredSlides: true,
+		paginationClickable: true,
 		simulateTouch: true,
-		spaceBetween: 20,
+		effect: 'coverflow',
+		spaceBetween: 20
 	});
-
+	cardSwiper.on('slideChangeEnd', function(e){
+		let activeImage = e.activeIndex + 1;
+		let backgroundImage = 'url(./imgs/ss'+ activeImage + '.png)';
+		foo[0].style.backgroundImage = backgroundImage;
+		foo[0].className += ' visible';
+		foo[1].className = foo[1].className.replace(' visible', '');
+		foo.push(foo.shift());
+	});
 	console.log(verticalScroller);
 }
 
